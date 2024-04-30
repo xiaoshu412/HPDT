@@ -85,8 +85,6 @@ class AddGaussianNoise(object):
 
     def __call__(self, tensor):
         return tensor + torch.randn(tensor.size()) * self.std + self.mean
-
-# 举例使用
 custom_transform = transforms.Compose([
     transforms.ToTensor(),
     AddGaussianNoise(mean=0., std=0.1),
