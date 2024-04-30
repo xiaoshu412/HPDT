@@ -12,10 +12,6 @@ from sklearn.model_selection import train_test_split
 from PIL import Image
 import random
 from torchtoolbox.transform import Cutout
-# %%
-# 参数设置
-BATCH_SIZE = 32
-NUM_WORKERS = 0
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 class ISIC2018Dataset():
     """ ISIC 2018 Dataset
